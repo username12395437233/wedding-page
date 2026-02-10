@@ -1,20 +1,27 @@
-import { Button } from '@/components/ui/button'
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
+import { Button } from '@/components/ui/button'
+import { Input } from './components/ui/input'
 
 function App() {
   return (
-    <div className="flex min-h-svh flex-col items-center justify-center">
-      <Button>Click me</Button>
-      <Tooltip>
-        <TooltipTrigger>Hover</TooltipTrigger>
-        <TooltipContent>
-          <p>Add to library</p>
-        </TooltipContent>
-      </Tooltip>
+    <div className="w-full flex justify-center ">
+      <div className="max-w-xl flex flex-col bg-amber-300">
+        <img src="/public/bantic.png"></img>
+        Приглашаем Вас на главное событие в нашей жизни - день свадьбы!
+        <Input></Input>
+        Sasha Katya
+        <Button>Click me</Button>
+        <Tooltip>
+          <TooltipTrigger>Hover</TooltipTrigger>
+          <TooltipContent>
+            <p>Add to library</p>
+          </TooltipContent>
+        </Tooltip>
+      </div>
     </div>
   )
 }
