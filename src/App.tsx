@@ -9,9 +9,17 @@ import { Input } from './components/ui/input'
 function App() {
   return (
     <div className="w-full flex justify-center ">
-      <div className="max-w-xl flex flex-col bg-amber-300">
+      <div className="max-w-xl flex flex-col">
         <img src="/public/bantic.png"></img>
-        Приглашаем Вас на главное событие в нашей жизни - день свадьбы!
+        <div className="flex flex-col">
+          <p>Приглашаем Вас</p>
+          <p>на главное событие</p>
+          <p>в нашей жизни - день свадьбы!</p>
+        </div>
+        <div className="mark">
+          <span className="dear">Dear</span>
+          <span className="friends">FRIENDS!</span>
+        </div>
         <Input></Input>
         Sasha Katya
         <Button>Click me</Button>

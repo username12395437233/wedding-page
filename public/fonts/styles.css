@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Antic Didone';
+  src: url('./Antic_Didone/AnticDidone-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bonheur Royale';
+  src: url('./Bonheur_Royale/BonheurRoyale-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+}
