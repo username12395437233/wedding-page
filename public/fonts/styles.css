@@ -13,3 +13,15 @@
   src: url('./Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 900;
 }
+
+.AnticDidone {
+  font-family: 'Antic Didone';
+}
+
+.BonheurRoyale {
+  font-family: 'Bonheur Royale';
+}
+
+.Montserrat {
+  font-family: 'Montserrat';
+}
