@@ -37,24 +37,27 @@ function App() {
   }, [])
 
   return (
-    <div className="w-full flex justify-center Montserrat">
+    <div className="w-full flex justify-center Montserrat bg-[url('/public/panorama.png')] bg-cover bg-center">
       <div className="w-full max-w-xl flex flex-col justify-center items-center bg-[#F7F0E8] text-center rounded-lg">
-        <img src="/public/BantPng.png" className="h-full"></img>
+        <img src="/public/BantPng.png" className="w-full"></img>
         <div className="text-xs">
           <p>Приглашаем Вас</p>
           <p>на главное событие</p>
           <p>в нашей жизни - день свадьбы!</p>
         </div>
-        <div className="p-6">
+        <div className="p-6 flex flex-col items-center">
           <p className="uppercase text-6xl AnticDidone">Aleksandr</p>
-          <p className="BonheurRoyale text-xs">lovelovelovelovelove</p>
-          {/* TODO IMG */}
+          <img src="/public/1.png" className="h-10" />
           <p className="uppercase text-6xl AnticDidone">Ekaterina</p>
         </div>
         <p>Торжество состоится</p>
         <p className="font-medium p-2 uppercase">08 | ИЮНЯ | 2026</p>
-        <div>
-          <p className="BonheurRoyale text-9xl font-thin">Dear</p>
+        <div className="h-10"></div>
+        <div className="relative w-fit">
+          <img
+            src="/public/3.png"
+            className="absolute top-[-40px] left-[-80px] h-16"
+          />
           <p className="AnticDidone text-6xl">FRIENDS!</p>
         </div>
         <div className="p-3">
@@ -110,66 +113,45 @@ function App() {
           </Button>
         </div>
 
-        <div>
-          <p className="BonheurRoyale text-9xl font-thin">Dress</p>
+        <div className="h-8"></div>
+        <div className="relative w-fit">
+          <img
+            src="/public/4.png"
+            className="absolute top-[-40px] left-[-80px] h-16"
+          />
           <p className="AnticDidone text-6xl">Code</p>
-
-          <div className="p-3">
-            <p>Будем очень благодарны, если Вы</p>
-            <p>поддержите стиль нашей свадьбы</p>
-            <p>в своих нарядах</p>
-          </div>
-          <div>
-            <p className="BonheurRoyale text-6xl font-thin p-4 text-left">
-              ladies:
-            </p>
-            <div className="flex justify-center items-center gap-4">
-              <div className="w-36 h-72 overflow-hidden rounded-lg">
-                <img
-                  src="/public/panorama.png"
-                  className="w-full h-full object-cover object-center"
-                  alt="Panorama"
-                />
-              </div>
-              <div className="w-36 h-72 overflow-hidden rounded-lg">
-                <img
-                  src="/public/panorama.png"
-                  className="w-full h-full object-cover object-center"
-                  alt="Panorama"
-                />
-              </div>
+        </div>
+        <div className="p-3">
+          <p>Будем очень благодарны, если Вы</p>
+          <p>поддержите стиль нашей свадьбы</p>
+          <p>в своих нарядах</p>
+        </div>
+        <div>
+          <div className="flex justify-center items-center gap-4">
+            <div className="w-36 h-72 overflow-hidden rounded-lg">
+              <img
+                src="/public/11.png"
+                className="w-full h-full object-cover object-center"
+                alt="Panorama"
+              />
             </div>
-          </div>
-          <div>
-            <p className="BonheurRoyale text-6xl font-thin p-4 text-left">
-              gentlements:
-            </p>
-            <div className="flex justify-center items-center gap-4">
-              <div className="w-36 h-72 overflow-hidden rounded-lg">
-                <img
-                  src="/public/panorama.png"
-                  className="w-full h-full object-cover object-center"
-                  alt="Panorama"
-                />
-              </div>
-              <div className="w-36 h-72 overflow-hidden rounded-lg">
-                <img
-                  src="/public/panorama.png"
-                  className="w-full h-full object-cover object-center"
-                  alt="Panorama"
-                />
-              </div>
+            <div className="w-36 h-72 overflow-hidden rounded-lg">
+              <img
+                src="/public/12.png"
+                className="w-full h-full object-cover object-center"
+                alt="Panorama"
+              />
             </div>
           </div>
         </div>
-        <p className="BonheurRoyale text-9xl font-thin">Details</p>
+        <img src="/public/5.png" className="h-22 mt-4"></img>
         <div className="p-3">
           <p>Если хотите подарить нам цветы</p>
           <p>или другие вещи то можно заказать</p>
           <p>по адресу: БА85к2, ....</p>
         </div>
 
-        <img src="/public/BantPng.png" className="h-full"></img>
+        <img src="/public/BantPng.png" className="w-full"></img>
         <p className="AnticDidone text-6xl uppercase">анкета</p>
         <div className="p-3">
           <p>Мы очень старались сделать праздник</p>
@@ -219,9 +201,7 @@ function App() {
             Отправить <ArrowRight />
           </a>
         </Button>
-        <p className="BonheurRoyale text-4xl font-thin">
-          All you need is love....
-        </p>
+        <img src="/public/2.png" className="pt-1 p-10"></img>
       </div>
     </div>
   )
