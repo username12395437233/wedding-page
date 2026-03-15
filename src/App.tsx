@@ -43,11 +43,17 @@ function App() {
     }))
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setSubmitted(true)
 
     if (!isFormValid) return
-    console.log('DATA TO BACKEND:', form)
+    await fetch('/api/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(form),
+    })
     setEnd(true)
   }
 
@@ -80,9 +86,29 @@ function App() {
     return () => clearInterval(timer)
   }, [])
 
+  // await fetch('https://your-domain.com/submit', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //     'X-API-Secret': 'change_me_super_secret',
+  //   },
+  //   body: JSON.stringify({
+  //     name: 'ter',
+  //     allergy: 'tre',
+  //     alcohol: {
+  //       whiteWine: true,
+  //       redWine: false,
+  //       champagne: false,
+  //       beer: false,
+  //       whiskey: false,
+  //       tinctures: false,
+  //     },
+  //   }),
+  // })
+
   return (
     <div className="relative min-h-screen w-full flex justify-center Montserrat bg-[#efe7de]">
-      <img src="/back.jpg" alt="" className="fixed inset-0 h-full w-full" />
+      <img src="/back_1.png" alt="" className="fixed inset-0 h-full w-full" />
 
       <div className="relative z-10 w-full max-w-xl flex flex-col justify-center items-center bg-[#F7F0E8] text-center rounded-lg">
         <img src="/BantPng.png" className="w-full mt-4"></img>
@@ -344,7 +370,7 @@ function App() {
               </Button>
             </div>
           ) : (
-            <img src="/2.png" className="pb-4 px-10 rotate-[3deg]" />
+            <img src="/2.png" className="pb-14 px-10 rotate-[3deg]" />
           )}
         </div>
       </div>
