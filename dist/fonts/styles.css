@@ -14,6 +14,13 @@
   font-weight: 100 900;
 }
 
+@font-face {
+  font-family: 'Playfair';
+  src: url('./playfair/Playfair-VariableFont_opsz,wdth,wght.ttf')
+    format('truetype');
+  font-weight: 100 900;
+}
+
 .AnticDidone {
   font-family: 'Antic Didone';
 }
@@ -24,4 +31,8 @@
 
 .Montserrat {
   font-family: 'Montserrat';
+}
+
+.Playfair {
+  font-family: 'Playfair';
 }
