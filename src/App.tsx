@@ -25,9 +25,7 @@ function App() {
 
   const isNameValid = form.name.trim().length > 0
 
-  const isAlcoholValid = Object.values(form.alcohol).some(Boolean)
-
-  const isFormValid = isNameValid && isAlcoholValid
+  const isFormValid = isNameValid
 
   const updateField = (key: 'name' | 'allergy', value: string) => {
     setForm((prev) => ({ ...prev, [key]: value }))
@@ -208,32 +206,33 @@ function App() {
           <p className="AnticDidone text-6xl pl-18 scale-y-125">CODE</p>
         </div>
         <div className="p-3 pt-10">
-          <p>Мы не хотим ограничивать Вас дресс-кодом,</p>
-          <p>но будем рады, если Ваши образы будут в</p>
+          <p>Мы не хотим ограничивать Вас</p>
+          <p>дресс-кодом, но будем рады,</p>
+          <p>если Ваши образы будут в</p>
           <p>классических оттенках.</p>
         </div>
         <div>
-          <img src="/Frame 14520.png" className="px-[70px]" />
+          <img src="/Frame 14520.png" className="px-[70px] pt-6" />
         </div>
         <div className="relative w-full mt-10">
           <img src="/bantishe.png" className="absolute left-0 top-0" />
 
           <div className="pt-[12rem] xs:pt-[16em] gap-4 flex flex-col">
             <div>
-              <p className="Playfair text-7xl text-[#371911]">16:00</p>
-              <p className="text-xl text-[#371911]">сбор гостей</p>
+              <p className="Playfair text-7xl">16:00</p>
+              <p className="text-xl">сбор гостей</p>
             </div>
             <div>
-              <p className="Playfair text-7xl text-[#371911]">17:00</p>
-              <p className="text-xl text-[#371911]">выездная регистрация</p>
+              <p className="Playfair text-7xl">17:00</p>
+              <p className="text-xl">выездная регистрация</p>
             </div>
             <div>
-              <p className="Playfair text-7xl text-[#371911]">18:00</p>
-              <p className="text-xl text-[#371911]">банкет</p>
+              <p className="Playfair text-7xl">18:00</p>
+              <p className="text-xl">банкет</p>
             </div>
             <div>
-              <p className="Playfair text-7xl text-[#371911]">22:00</p>
-              <p className="text-xl text-[#371911]">завершение вечера</p>
+              <p className="Playfair text-7xl">22:00</p>
+              <p className="text-xl">завершение вечера</p>
             </div>
           </div>
         </div>
@@ -244,15 +243,17 @@ function App() {
             <div className="w-full">
               <p className="AnticDidone text-6xl uppercase">анкета</p>
               <div className="p-3 pt-6">
-                <p>Просим не дарить нам цветы — мы не успеем</p>
-                <p>насладиться их красотой после праздника.</p>
+                <p>Просим не дарить нам цветы,</p>
+                <p>мы не успеем насладиться</p>
+                <p>их красотой после праздника.</p>
                 <p>По всем вопросам вы можете обратиться к:</p>
                 <p className="font-medium">+7 993 271 62 92 (Tg)</p>
               </div>
               <div className="p-6">
-                <p>Мы очень старались сделать этот праздник</p>
-                <p>особенным, поэтому будем признательны,</p>
-                <p>если вы подтвердите своё присутствие до</p>
+                <p>Мы очень старались сделать праздник</p>
+                <p>особенным, поэтому будем</p>
+                <p>признательны, если вы подтвердите</p>
+                <p>своё присутствие до</p>
                 <p className="font-medium">15 апреля 2026 года.</p>
               </div>
               <div className="px-6 pb-4 w-full text-left">
@@ -278,14 +279,7 @@ function App() {
                 />
               </div>
               <div className="px-4 w-full">
-                <div
-                  className={cn(
-                    'text-left w-full px-6 flex flex-col gap-4 rounded-md p-2',
-                    submitted &&
-                      !isAlcoholValid &&
-                      'border border-destructive rounded'
-                  )}
-                >
+                <div className="text-left w-full px-6 flex flex-col gap-4 rounded-md p-2">
                   <p className="font-medium">Алкоголь:</p>
 
                   <Field orientation="horizontal">
@@ -355,12 +349,6 @@ function App() {
                   </Field>
                 </div>
               </div>
-
-              {submitted && !isAlcoholValid && (
-                <p className="text-sm text-destructive">
-                  Выберите хотя бы один вариант
-                </p>
-              )}
 
               <Button
                 className="w-fit uppercase m-2 mt-6"
