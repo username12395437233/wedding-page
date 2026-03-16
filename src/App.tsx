@@ -5,7 +5,6 @@ import { Input } from './components/ui/input'
 import { Checkbox } from './components/ui/checkbox'
 import { Label } from './components/ui/label'
 import { Field } from './components/ui/field'
-import { cn } from './lib/utils'
 
 function App() {
   const [submitted, setSubmitted] = useState(false)
